@@ -1,8 +1,9 @@
 const authorQuestionElement = document.getElementById('authorquestion');
-const answerButtons = document.getElementByclass('btn--default')
+const answerButtons = document.getElementsByClassName('btn--default')
 
 function setAuthorQuestion() {
-
+  let currentquestion = authorQuestions[0];
+  document.getElementById(authorQuestionElement).innerHTML = currentQuestion.question;
 }
 
 const authorquestions = [
