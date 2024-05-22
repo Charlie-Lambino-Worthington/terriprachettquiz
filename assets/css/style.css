@@ -3,10 +3,14 @@
     margin: 0;
     box-sizing: border-box;
 }
+body {
+    background-color:#A5668B ;
+}
 .homepage {
     background-color: #C7F0BD;
     color: #3D0B37;
     height: 95vh;
+    width: 75%;
   margin: 10px auto;
   background-image: url("assets/images/77762.jpg") ;
   background-size: 200px 200px;
@@ -14,9 +18,7 @@
   border: 10px solid #3D0B37;
   border-radius: 20px;
   text-align: center;
-  background-color: ;
- 
-  overflow: hidden;
+  box-shadow: 0px 1px 4px -2px #333;
 }
 .homepage button {
     border-radius: 50%; 
@@ -38,3 +40,6 @@
 .homepage button:hover {
    background-color: #568259;
 }
+.hide {
+    display: none;
+  }
