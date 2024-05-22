@@ -1,0 +1,40 @@
+*  {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.homepage {
+    background-color: #C7F0BD;
+    color: #3D0B37;
+    height: 95vh;
+  margin: 10px auto;
+  background-image: url("assets/images/77762.jpg") ;
+  background-size: 200px 200px;
+  animation: scroll 5s linear infinite;
+  border: 10px solid #3D0B37;
+  border-radius: 20px;
+  text-align: center;
+  background-color: ;
+ 
+  overflow: hidden;
+}
+.homepage button {
+    border-radius: 50%; 
+    font-size: 5vh;
+    color: #EAF2EF;
+    margin: 10px;
+    margin-top: 5%;
+    position: relative;
+    display: inline-block;
+    padding: 15px;
+
+    background-color: #3D0B37;
+    font-family: sans-serif;
+    font-weight: bold;
+    box-shadow: 0px 1px 4px -2px #333;
+    text-shadow: 0px -1px #333;
+    margin-bottom: 5px;
+}
+.homepage button:hover {
+   background-color: #568259;
+}
