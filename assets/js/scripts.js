@@ -1,5 +1,5 @@
 const authorQuestionElement = document.getElementById('authorquestion');
-const deathQuestionElement = document.getElementById('deathquestion');
+
 //const witchQuestionElement = document.getElementById('witchquestion');
 //const wizardQuestionElement = document.getElementById('wizardquestion');
 //const moistQuestionElement = document.getElementById('moistquestion');
@@ -9,16 +9,13 @@ const choices = Array.from(document.getElementsByClassName('btn--default'));
 
 
 let currentquestion = {};
-let currentDeathQuestion = {};
+
 
 let acceptingAnswers = false;
 let score = 0;
 let questionCounter = 0;
-//let availableDeathQuesions = [];
 let availableAuthorQuesions = [];
-//let availableWitchQuesions = [];
-//let availableWizardQuesions = [];
-//let availableMoistQuesions = [];
+
 
 const authorQuestions = [
   {
@@ -463,6 +460,11 @@ Max_Questions = 10;
   getNewAuthorQuestion();
 }
 getNewAuthorQuestion = () => {
+  if (availableAuthorQuesions.length === 0 || questionCounter >= MAX_AUTHOR_QUESTIONS) {
+    //go to the end page
+    return window.location.assign("endscreen.html");
+  } else
+ 
   questionCounter++;
  const authorQuestionIndex = Math.floor(Math.random() * availableAuthorQuesions.length);
  currentQuestion = availableAuthorQuesions[authorQuestionIndex];
@@ -497,27 +499,6 @@ choices.forEach((choice) => {
 });
 
 
+
 startAuthorQuiz()
 
-//death quiz
-//startDeathQuiz = () => {
- // questionCounter = 0;
- // score = 0;
- // availableDeathQuesions = [...deathQuestions];
- // console.log(availabledeathQuesions);
-//  getNewDeathQuestion();
-//}
-//getNewDeathQuestion = () => {
- // questionCounter++;
- //const deathQuestionIndex = Math.floor(Math.random() * availableDeathQuesions.length);
- //currentDeathQuestion =availableDeathQuesions[deathQuestionIndex];
- //deathQuestionElement.innerText = currentDeathQuestion.question;
-
-//});
-
-//availableDeathQuesions.splice(deathQuestionIndex, 1);
-//acceptingAnswers = true;
-
-
-
-//startDeathQuiz()
