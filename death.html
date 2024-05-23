@@ -8,23 +8,38 @@
     <title>Terry Prachett quiz</title>
     <link rel="icon" type="image/x-icon" href="assets/images/tmotp_web_0.jpg">
     <link rel="stylesheet" href="assets/css/style.css">
+
 </head>
 <body>
-    <div class="container homepage">
-        <div class="container-question hide">
-           <div class="question">Question</div>
-           <div class="answerbuttons btn-grid">
-            <button class="btn">Answer1</button>
-            <button class="btn">Answer2</button>
-            <button class="btn">Answer3</button>
-            <button class="btn">Answer4</button>
-           </div>
-           
-            <div class="controls">
-             <button class="start-btn btn">Start</button>
-             <button class="next-btn btn hide">Next</button>
+    <section>
+        <div class="container homepage">
+        <div id="deathquiz" class="centered">
+            <br>
+        
+            <h1>Terry Prachett Author Quiz</h1>
+            <br>
+            <br>
+
+            <h2 id="deathquestion" class="headline-seconday--grouped">?</h2>
+        <br>
+            <h3 id="deathscore">0</h3>
+            <br>
+            <div class="answerbuttons btn-grid">
+            <button class="btn--default" data-number="1">Answer1</button>
+            <button class="btn--default" data-number="2">Answer2</button>
+            <br>
+            <br>
+            <button class="btn--default" data-number="3">Answer3</button>
+            <button class="btn--default" data-number="4">Answer4</button>
             </div>
         </div>
+        <footer>
+            <br>
+            <br>
+            <p id="progress">question x of y</p>
+        </footer>
     </div>
+</section>
+    <script src="assets/js/scripts.js"></script>
 </body>
 </html>

@@ -1,11 +1,20 @@
 const authorQuestionElement = document.getElementById('authorquestion');
+const deathQuestionElement = document.getElementById('deathquestion');
+const witchQuestionElement = document.getElementById('witchquestion');
+const wizardQuestionElement = document.getElementById('wizardquestion');
+const moistQuestionElement = document.getElementById('moistquestion');
+
 const choices = Array.from(document.getElementsByClassName('btn--default'));
 
 let currentquestion = {};
-let acceptingAnswers = true;
+let acceptingAnswers = false;
 let score = 0;
 let questionCounter = 0;
+let availableDeathQuesions = [];
 let availableAuthorQuesions = [];
+let availableWitchQuesions = [];
+let availableWizardQuesions = [];
+let availableMoistQuesions = [];
 
 const authorQuestions = [
   {
@@ -433,10 +442,14 @@ const authorQuestions = [
  ]
 
 const MAX_AUTHOR_QUESTIONS = authorQuestions.length;
+const MAX_DEATH_QUESTIONS = deathQuestions.length;
+const MAX_WITCH_QUESTIONS = witchQuestions.length;
+const MAX_WIZARD_QUESTIONS = wizardQuestions.length;
+const MAX_MOIST_QUESTIONS = moistQuestions.length;
 //constants
 const Correct_Bonus = 1;
 Max_Questions = 10;
-
+//author quiz
  startAuthorQuiz = () => {
   questionCounter = 0;
   score = 0;
@@ -454,7 +467,32 @@ getNewAuthorQuestion = () => {
   const number = choice.dataset['number'];
   choice.innerText = currentQuestion['choice' + number];
 });
+availableAuthorQuesions.splice(authorQuestionIndex, 1);
+acceptingAnswers = true;
 }
 
 
 startAuthorQuiz()
+
+//death quiz
+startDeathQuiz = () => {
+  questionCounter = 0;
+  score = 0;
+  availableDeathQuesions = [...deathQuestions];
+  console.log(availabledeathQuesions);
+  getNewDeathQuestion();
+}
+getNewDeathQuestion = () => {
+  questionCounter++;
+ const deathQuestionIndex = Math.floor(Math.random() * availableDeathQuesions.length);
+ currentQuestion =availableDeathQuesions[deathQuestionIndex];
+ deathQuestionElement.innerText = currentQuestion.question;
+
+});
+
+availableAuthorQuesions.splice(authorQuestionIndex, 1);
+acceptingAnswers = true;
+}
+
+
+startDeathQuiz()
