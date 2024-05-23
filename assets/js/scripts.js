@@ -1,20 +1,24 @@
 const authorQuestionElement = document.getElementById('authorquestion');
 const deathQuestionElement = document.getElementById('deathquestion');
-const witchQuestionElement = document.getElementById('witchquestion');
-const wizardQuestionElement = document.getElementById('wizardquestion');
-const moistQuestionElement = document.getElementById('moistquestion');
+//const witchQuestionElement = document.getElementById('witchquestion');
+//const wizardQuestionElement = document.getElementById('wizardquestion');
+//const moistQuestionElement = document.getElementById('moistquestion');
 
 const choices = Array.from(document.getElementsByClassName('btn--default'));
+//const deathchoices = Array.from(document.getElementsByClassName('btn--death'));
+
 
 let currentquestion = {};
+let currentDeathQuestion = {};
+
 let acceptingAnswers = false;
 let score = 0;
 let questionCounter = 0;
-let availableDeathQuesions = [];
+//let availableDeathQuesions = [];
 let availableAuthorQuesions = [];
-let availableWitchQuesions = [];
-let availableWizardQuesions = [];
-let availableMoistQuesions = [];
+//let availableWitchQuesions = [];
+//let availableWizardQuesions = [];
+//let availableMoistQuesions = [];
 
 const authorQuestions = [
   {
@@ -442,25 +446,26 @@ const authorQuestions = [
  ]
 
 const MAX_AUTHOR_QUESTIONS = authorQuestions.length;
-const MAX_DEATH_QUESTIONS = deathQuestions.length;
-const MAX_WITCH_QUESTIONS = witchQuestions.length;
-const MAX_WIZARD_QUESTIONS = wizardQuestions.length;
-const MAX_MOIST_QUESTIONS = moistQuestions.length;
+//const MAX_DEATH_QUESTIONS = deathQuestions.length;
+//const MAX_WITCH_QUESTIONS = witchQuestions.length;
+//const MAX_WIZARD_QUESTIONS = wizardQuestions.length;
+//const MAX_MOIST_QUESTIONS = moistQuestions.length;
 //constants
 const Correct_Bonus = 1;
 Max_Questions = 10;
+
+
 //author quiz
  startAuthorQuiz = () => {
   questionCounter = 0;
   score = 0;
   availableAuthorQuesions = [...authorQuestions];
-  console.log(availableAuthorQuesions);
   getNewAuthorQuestion();
 }
 getNewAuthorQuestion = () => {
   questionCounter++;
  const authorQuestionIndex = Math.floor(Math.random() * availableAuthorQuesions.length);
- currentQuestion =availableAuthorQuesions[authorQuestionIndex];
+ currentQuestion = availableAuthorQuesions[authorQuestionIndex];
  authorQuestionElement.innerText = currentQuestion.question;
 
  choices.forEach((choice) => {
@@ -468,31 +473,51 @@ getNewAuthorQuestion = () => {
   choice.innerText = currentQuestion['choice' + number];
 });
 availableAuthorQuesions.splice(authorQuestionIndex, 1);
-acceptingAnswers = true;
-}
+    acceptingAnswers = true;
+};
+
+choices.forEach((choice) => {
+  choice.addEventListener('click', (e) => {
+      if (!acceptingAnswers) return;
+
+      acceptingAnswers = false;
+      const selectedChoice = e.target;
+      const selectedAnswer = selectedChoice.dataset["number"];
+  
+      const classToApply =
+        selectedAnswer == currentQuestion.answer ? "correct" : "incorrect";
+  
+      selectedChoice.parentElement.classList.add(classToApply);
+  
+      setTimeout(() => {
+        selectedChoice.parentElement.classList.remove(classToApply);
+        getNewAuthorQuestion();
+      }, 1000);
+  });
+});
 
 
 startAuthorQuiz()
 
 //death quiz
-startDeathQuiz = () => {
-  questionCounter = 0;
-  score = 0;
-  availableDeathQuesions = [...deathQuestions];
-  console.log(availabledeathQuesions);
-  getNewDeathQuestion();
-}
-getNewDeathQuestion = () => {
-  questionCounter++;
- const deathQuestionIndex = Math.floor(Math.random() * availableDeathQuesions.length);
- currentQuestion =availableDeathQuesions[deathQuestionIndex];
- deathQuestionElement.innerText = currentQuestion.question;
+//startDeathQuiz = () => {
+ // questionCounter = 0;
+ // score = 0;
+ // availableDeathQuesions = [...deathQuestions];
+ // console.log(availabledeathQuesions);
+//  getNewDeathQuestion();
+//}
+//getNewDeathQuestion = () => {
+ // questionCounter++;
+ //const deathQuestionIndex = Math.floor(Math.random() * availableDeathQuesions.length);
+ //currentDeathQuestion =availableDeathQuesions[deathQuestionIndex];
+ //deathQuestionElement.innerText = currentDeathQuestion.question;
 
-});
+//});
 
-availableAuthorQuesions.splice(authorQuestionIndex, 1);
-acceptingAnswers = true;
-}
+//availableDeathQuesions.splice(deathQuestionIndex, 1);
+//acceptingAnswers = true;
 
 
-startDeathQuiz()
+
+//startDeathQuiz()
