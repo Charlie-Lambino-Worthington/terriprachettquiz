@@ -1,5 +1,5 @@
 const authorQuestionElement = document.getElementById('authorquestion');
-const answerButtons = Array.from(document.getElementsByClassName('btn--default'));
+const choices = Array.from(document.getElementsByClassName('btn--default'));
 
 let currentquestion = {};
 let acceptingAnswers = true;
@@ -108,6 +108,11 @@ getNewAuthorQuestion = () => {
  const authorQuestionIndex = Math.floor(Math.random() * availableAuthorQuesions.length);
  currentQuestion =availableAuthorQuesions[authorQuestionIndex];
  authorQuestionElement.innerText = currentQuestion.question;
+
+ choices.forEach((choice) => {
+  const number = choice.dataset['number'];
+  choice.innerText = currentQuestion['choice' + number];
+});
 }
 
 
