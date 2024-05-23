@@ -8,22 +8,24 @@
     <title>Terry Prachett quiz</title>
     <link rel="icon" type="image/x-icon" href="assets/images/tmotp_web_0.jpg">
     <link rel="stylesheet" href="assets/css/style.css">
+
 </head>
 <body>
     <div class="container homepage">
        <div id="authorquiz" class="centered">
         <h1>Terry Prachett Author Quiz</h1>
-        <h2 id="authorquestion" class="headline-seconday--grouped"></h2>
+        <h2 id="authorquestion" class="headline-seconday--grouped">?</h2>
         <h3 id="authorscore"></h3>
-
-        <button id="choice0" class="btn--default">choice 0</button>
-        <button id="choice1" class="btn--default">choice 1</button>
-        <button id="choice2" class="btn--default">choice 2</button>
-        <button id="choice3" class="btn--default">choice 3</button>
+        <div class="answerbuttons btn-grid">
+         <button class="btn--default" data-number="1">Answer1</button>
+         <button class="btn--default" data-number="2">Answer2</button>
+         <button class="btn--default" data-number="3">Answer3</button>
+         <button class="btn--default" data-number="4">Answer4</button>
+        </div>
        </div>
     <footer>
         <p id="progress">question x of y</p>
     </footer>
-    <script src="assets/js/script.js"></script>
+    <script src="assets/js/scripts.js"></script>
 </body>
 </html>
