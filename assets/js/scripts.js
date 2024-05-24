@@ -1,19 +1,18 @@
-const authorQuestionElement = document.getElementById('authorquestion');
-
+const questionElement = document.getElementById('question');
 const choices = Array.from(document.getElementsByClassName('btn--default'));
+const questionCounterText = document.getElementById("questionCounter");
+const scoreText = document.getElementById("score");
 
-
-
-
-let currentquestion = {};
-
-
+let currentQuestion = {};
 let acceptingAnswers = false;
 let score = 0;
 let questionCounter = 0;
-let availableQuesions = [];
+let availableQuestions = [];
 
+const MAX_QUESTIONS = 10;
+const Correct_Bonus = 1;
 
+//Questions Arrays
 
 const authorQuestions = [
   {
@@ -480,7 +479,7 @@ const authorQuestions = [
         choice1: 'Pseudopolis Yard', 
         choice2: 'The Mended Drum', 
         choice3: 'The Temple of Small Gods', 
-        choice4: 'The Patrician's Palace', 
+        choice4: 'The Patricians Palace', 
       answer: 1
     },
     {
@@ -686,7 +685,7 @@ const authorQuestions = [
           answer: 3
         },
         {
-          question: 'What is Discworld's magic number?',
+          question: 'What is Discworlds magic number?',
           choice1: '4', 
           choice2: '8', 
           choice3: '13',
@@ -695,110 +694,108 @@ const authorQuestions = [
         },  
  ]
 
-const MAX_QUESTIONS = availableQuestions.length;
 
-const Correct_Bonus = 1;
-Max_Questions = 10;
+//category select function
 
-//catagory select function
-
-function selectCatagory(catagory) {
-  switch(catagory)
-  {
+const selectCategory = (category) => {
+  switch(category) {
       case "author":
         availableQuestions = [...authorQuestions];
-          document.getElementById("name").innerHTML = "Terry Prachett Author Quiz";
-          startQuiz()
-          break;
+        document.getElementById("name").innerText = "Terry Prachett Author Quiz";
+        console.log('author');
+        loadQuiz();
+        break;
       case "death":
         availableQuestions = [...deathQuestions];
-          document.getElementById("name").innerHTML = "Terry Prachett Death Quiz";
-          startQuiz()
-          break;
+        document.getElementById("name").innerText = "Terry Prachett Death Quiz";
+        loadQuiz();
+        break;
       case "witch":
         availableQuestions = [...witchQuestions];
-          document.getElementById("name").innerHTML = "Terry Prachett Witches Quiz";
-          startQuiz()
-          break;
+        document.getElementById("name").innerText = "Terry Prachett Witches Quiz";
+        loadQuiz();
+        break;
       case "wizard":
         availableQuestions = [...wizardQuestions];
-          document.getElementById("name").innerHTML = "Terry Prachett Wizards Quiz";
-          startQuiz()
-          break;
-          case "moist":
-            availableQuestions = [...moistQuestions];
-          document.getElementById("name").innerHTML = "Terry Prachett Industrial Revolution Quiz";
-          startQuiz()
-          break;
+        document.getElementById("name").innerText = "Terry Prachett Wizards Quiz";
+        loadQuiz();
+        break;
+      case "moist":
+        availableQuestions = [...moistQuestions];
+        document.getElementById("name").innerText = "Terry Prachett Industrial Revolution Quiz";
+        loadQuiz();
+        break;
       case "disk":
         availableQuestions = [...diskQuestions];
-          document.getElementById("name").innerHTML = "Terry Prachett DiskWorld Quiz";
-          startQuiz()
-          break;
-          case "literature":
-            availableQuestions = [...litQuestions];
-          document.getElementById("name").innerHTML = "Terry Prachett Literature Quiz";
-          startQuiz()
-          break;
+        document.getElementById("name").innerText = "Terry Prachett DiskWorld Quiz";
+        loadQuiz();
+        break;
+      case "literature":
+        availableQuestions = [...litQuestions];
+        document.getElementById("name").innerText = "Terry Prachett Literature Quiz";
+        loadQuiz();
+        break;
       case "guards":
         availableQuestions = [...guardQuestions];
-          document.getElementById("name").innerHTML = "Terry Prachett Guards Quiz";
-          startQuiz()
-          break;
+        document.getElementById("name").innerText = "Terry Prachett Guards Quiz";
+        loadQuiz();
+        break;
       }
-    
-  }
+  };
+
+// quiz
 
 
-
-
-//author quiz
- startQuiz = () => {
+const loadQuiz = () => {
   questionCounter = 0;
   score = 0;
-
   getNewQuestion();
-}
-getNewQuestion = () => {
-  if (availableQuestions.length === 0 || questionCounter >= MAX_QUESTIONS) {
-    //go to the end page
-   // return window.location.assign("endscreen.html");
-  } else
- 
-  questionCounter++;
- const QuestionIndex = Math.floor(Math.random() * availableQuestions.length);
- currentQuestion = availableQuestions[QuestionIndex];
- QuestionElement.innerText = currentQuestion.question;
-
- choices.forEach((choice) => {
-  const number = choice.dataset['number'];
-  choice.innerText = currentQuestion['choice' + number];
-});
-availableQuestions.splice(QuestionIndex, 1);
-    acceptingAnswers = true;
 };
 
-choices.forEach((choice) => {
-  choice.addEventListener('click', (e) => {
-      if (!acceptingAnswers) return;
+const getNewQuestion = () => {
+  if (availableQuestions.length === 0 || questionCounter >= MAX_QUESTIONS) {
+    // Go to the end page
+    return window.location.assign("endscreen.html");
+  }
 
-      acceptingAnswers = false;
-      const selectedChoice = e.target;
-      const selectedAnswer = selectedChoice.dataset["number"];
-  
-      const classToApply =
-        selectedAnswer == currentQuestion.answer ? "correct" : "incorrect";
-  
-      selectedChoice.parentElement.classList.add(classToApply);
-  
-      setTimeout(() => {
-        selectedChoice.parentElement.classList.remove(classToApply);
-        getNewQuestion();
-      }, 1000);
+  questionCounter++;
+  questionCounterText.innerText = `${questionCounter}/${MAX_QUESTIONS}`;
+  const questionIndex = Math.floor(Math.random() * availableQuestions.length);
+  currentQuestion = availableQuestions[questionIndex];
+  questionElement.innerText = currentQuestion.question;
+
+  choices.forEach(choice => {
+    const number = choice.dataset['number'];
+    choice.innerText = currentQuestion['choice' + number];
+  });
+
+  availableQuestions.splice(questionIndex, 1);
+  acceptingAnswers = true;
+};
+
+choices.forEach(choice => {
+  choice.addEventListener('click', e => {
+    if (!acceptingAnswers) return;
+
+    acceptingAnswers = false;
+    const selectedChoice = e.target;
+    const selectedAnswer = selectedChoice.dataset['number'];
+
+    const classToApply = selectedAnswer == currentQuestion.answer ? "correct" : "incorrect";
+
+    selectedChoice.parentElement.classList.add(classToApply);
+
+    setTimeout(() => {
+      selectedChoice.parentElement.classList.remove(classToApply);
+      getNewQuestion();
+    }, 1000);
   });
 });
 
-
+incrementScore = num => {
+  score += num;
+  scoreText.innerText = score;
+};
 
 
 

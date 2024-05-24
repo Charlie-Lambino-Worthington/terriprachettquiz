@@ -5,24 +5,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/29ef0a5efd.js" crossorigin="anonymous"></script>
-    <title>Terry Prachett quiz</title>
+    <title>Terry Pratchett Quiz</title>
     <link rel="icon" type="image/x-icon" href="assets/images/tmotp_web_0.jpg">
     <link rel="stylesheet" href="assets/css/style.css">
-
 </head>
 <body>
     <div class="container homepage">
-        <div class="container-question">
+        <div id="container-catagory">
             <div class="controls">
-                <h1>pick your catagory</h1>
-               <a href="author.html"> <button onclick="selectCatagory('author')" id="authorcatagory" class="startbtn"><i class="fa-solid fa-feather-pointed"></i> Author</button></a>
-                <a href="author.html"><button onclick="selectCatagory('disk')" id="diskworldcatagory" class="startbtn"><i class="fa-solid fa-republican"></i> Diskworld</button></a>
-                <a href="author.html"><button onclick="selectCatagory('witch')" id="witchescatagory" class="startbtn"><i class="fa-solid fa-broom"></i> Witches</button></a>
-                <a href="author.html"><button onclick="selectCatagory('wizard')" onclick="selectCatagory('author')" id="wizardscatagory" class="startbtn"><i class="fa-solid fa-hat-wizard"></i> Wizards</button></a>
-                <a href="author.html"><button onclick="selectCatagory('guards')" id="guardscatagory" class="startbtn"><i class="fa-solid fa-person-military-pointing"></i> Guards</button></a>
-                <a href="author.html"><button onclick="selectCatagory('moist')" id="industrialrevolutioncatagory" class="startbtn"><i class="fa-solid fa-gears"></i> Industrial Revolution</button></a>
-                <a href="author.html"><button onclick="selectCatagory('death')" id="deathcatagory" class="startbtn" ><i class="fa-solid fa-skull"></i> Death</button></a>
-                <a href="author.html"><button onclick="selectCatagory('literature')" id="literaturecatagory" class="startbtn"><i class="fa-solid fa-book-bookmark"></i> Literature</button></a>
+                <h1>Pick Your Category</h1>
+                <button onclick="selectCategory('author')" id="authorcatagory" class="startbtn"><i class="fa-solid fa-feather-pointed"></i> Author</button>
+                <button onclick="selectCategory('disk')" id="diskworldcatagory" class="startbtn"><i class="fa-solid fa-republican"></i> Diskworld</button>
+                <button onclick="selectCategory('witch')" id="witchescatagory" class="startbtn"><i class="fa-solid fa-broom"></i> Witches</button>
+                <button onclick="selectCategory('wizard')" onclick="selectCatagory('author')" id="wizardscatagory" class="startbtn"><i class="fa-solid fa-hat-wizard"></i> Wizards</button>
+                <button onclick="selectCategory('guards')" id="guardscatagory" class="startbtn"><i class="fa-solid fa-person-military-pointing"></i> Guards</button>
+                <button onclick="selectCategory('moist')" id="industrialrevolutioncatagory" class="startbtn"><i class="fa-solid fa-gears"></i> Industrial Revolution</button>
+                <button onclick="selectCategory('death')" id="deathcatagory" class="startbtn" ><i class="fa-solid fa-skull"></i> Death</button>
+                <button onclick="selectCategory('literature')" id="literaturecatagory" class="startbtn"><i class="fa-solid fa-book-bookmark"></i> Literature</button>
+            </div>
+        </div>
+    </div>
+    <div class="container homepage">
+        <div id="quiz" class="centered">
+        
+            <h1 id="name"></h1>
+            <div id="hud">
+                <div id="hud-item">
+                  <p class="hud-prefix">
+                    Question
+                  </p>
+                  <h1 class="hud-main-text" id="questionCounter"></h1>
+                </div>
+                <div id="hud-item">
+                  <p class="hud-prefix">
+                    Score
+                  </p>
+                  <h1 class="hud-main-text" id="score">
+                   
+                  </h1>
+                </div>
+              </div>
+<br>
+            <h2 id="question" class="headline-seconday--grouped"></h2>
+        
+        
+            <div class="answerbuttons btn-grid">
+            <button class="btn--default" data-number="1"></button>
+            <br>
+            <button class="btn--default" data-number="2"></button>
+            <br>
+            <button class="btn--default" data-number="3"></button>
+            <br>
+            <button class="btn--default" data-number="4"></button>
             </div>
         </div>
     </div>
