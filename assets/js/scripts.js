@@ -10,7 +10,7 @@ let questionCounter = 0;
 let availableQuestions = [];
 
 const MAX_QUESTIONS = 10;
-const Correct_Bonus = 1;
+const CORRECT_BONUS = 1;
 
 //Questions Arrays
 
@@ -782,6 +782,9 @@ choices.forEach(choice => {
     const selectedAnswer = selectedChoice.dataset['number'];
 
     const classToApply = selectedAnswer == currentQuestion.answer ? "correct" : "incorrect";
+    if (classToApply === "correct") {
+      incrementScore(CORRECT_BONUS);
+    }
 
     selectedChoice.parentElement.classList.add(classToApply);
 
