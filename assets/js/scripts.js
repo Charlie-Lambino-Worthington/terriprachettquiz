@@ -440,6 +440,261 @@ const authorQuestions = [
         },  
  ]
 
+ const guardQuestions = [
+  {
+    question: 'Carrot is from which species?',
+      choice1: 'Dwarf', 
+      choice2: 'Golem', 
+      choice3: 'Vampire', 
+      choice4: 'Werewolf',
+      answer: 1
+  },
+  {
+    question: 'In which book is the librarian made an honorary member of the watch?',
+      choice1: 'Night Watch',
+      choice2: 'Thud! ', 
+      choice3: 'Snuff ', 
+      choice4: 'Guards Guards', 
+      answer: 4
+    
+  },
+  {
+      question: 'Which member of the Watch communicated with their wife via written notes??',
+        choice1: 'Captain Angua von Uberwald', 
+        choice2: 'Sergeant Fred Colon',
+        choice3: 'Sergeant Cheery Littlebottom', 
+        choice4: 'Corporal Buggy Swires', 
+        answer: 2
+      
+    },
+    {
+      question: 'Who is Carrot staying with when he first moves to join the city watch?',
+        choice1: 'Sam Vimes',
+        choice2: 'Mrs. Cake', 
+        choice3: 'Granny Weatherwax', 
+        choice4: 'Mrs. Palm and her "daughters"',
+      answer: 4
+    },  
+    {
+      question: 'When the Watch House on Treacle Mine Road was destroyed, which building became the new Night Watch base?',
+        choice1: 'Pseudopolis Yard', 
+        choice2: 'The Mended Drum', 
+        choice3: 'The Temple of Small Gods', 
+        choice4: 'The Patrician's Palace', 
+      answer: 1
+    },
+    {
+      question: 'The Watch were rewarded for protecting the city from a dragon. What did they ask for?',
+        choice1: ' Gold chain mail and silver boots', 
+        choice2: ' Ten barrels of beer and all the peanuts in Ankh-Morpork', 
+        choice3: 'One million dollars', 
+        choice4: 'A kettle, a dartboard, and a small pay raise', 
+        answer: 4
+    },
+    {
+        question: 'Which species did Commander Vimes have a particular hatred of?',
+        choice1: 'Werewolves', 
+        choice2: 'Gargoyles',
+          choice3: 'Vampires ', 
+          choice4: 'Dwarfsn', 
+        answer: 3
+      },
+      {
+        question: 'Whose wages consisted of five pigeons a week?',
+          choice1: ' Captain Carrot', 
+         choice2: 'Corporal Nobbs', 
+          choice3: 'Sergeant Colon', 
+          choice4: 'Constable Downspout', 
+        answer: 4
+      },    
+      {
+          question: 'Who did the guards that Vimes nicknamed Nobbski and Colonesque refuse to let into Bonk without a "pisspot"?',
+            choice1: 'Detritus', 
+            choice2: 'The Low King',
+            choice3: 'Sam Vimes', 
+            choice4: 'Captain Colon ', 
+          answer: 1
+        },
+        {
+          question: 'Which of these crimes was carrot not told not to enforce, but allowed to throw the book at?',
+          choice1: 'Head of the Theives Guild for Conspiracy to Commit Crime, Section 14 (iii) of the General Felonies Act 1678', 
+          choice2: 'Countless charges against the king of Ankh-Morpork', 
+          choice3: 'Unsheathed edged weapons, Section 3 of Public Ale Houses (Opening) Act 1678',
+          choice4: 'Licensed Premises (Hygiene) Acts of 1433', 
+          answer: 2
+        },  
+ ]
+
+ const litQuestions = [
+  {
+    question: 'Which of these is not one of the Science of Disk world Series?',
+      choice1: 'The Globe', 
+      choice2: 'Judgement Day', 
+      choice3: 'Darwins Watch', 
+      choice4: 'The Edge',
+      answer: 4
+  },
+  {
+    question: 'Which witch has a published cookbook?',
+      choice1: 'Granny Weatherwax',
+      choice2: 'Magrat Garlick', 
+      choice3: 'Tiffany Aching', 
+      choice4: 'Nanny Ogg', 
+      answer: 4
+    
+  },
+  {
+      question: 'Which of these is not a recipe from a published cookbook?',
+        choice1: 'Strawberry Wobbler', 
+        choice2: 'Dried Frog Kebabs',
+        choice3: 'Distressed Pudding', 
+        choice4: 'Deep-Sea Blowfish', 
+        answer: 2
+      
+    },
+    {
+      question: 'Mrs Georgina Bradshaw’s invaluable guide to the destinations and diversions of the railway gives suggestions for 3 of these which is not included?',
+        choice1: 'Ticketing',
+        choice2: 'Transporting your swamp dragon', 
+        choice3: 'Elegant resorts and quaint inns', 
+        choice4: 'Packing for your travels',
+      answer: 4
+    },  
+    {
+      question: 'Who authorised Mrs Bradshaw’s Handbook?',
+        choice1: 'Mr Lipwig ', 
+        choice2: 'Dick Simnel', 
+        choice3: 'Harry king', 
+        choice4: 'Lord Havelock Vetinari', 
+      answer: 1
+    },
+    {
+      question: 'In her book Nannny Ogg imparts her thoughts on?',
+        choice1: 'Life', 
+        choice2: 'Death', 
+        choice3: 'Etiquette', 
+        choice4: 'Royalty', 
+        answer: 4
+    },
+    {
+        question: 'At six o’clock every day, without fail, with no excuses, Sam Vimes must go home to read what book to his little boy.?',
+        choice1: 'Where’s My pony?', 
+        choice2: 'Where’s My Cat?',
+          choice3: 'Where’s My Cow?', 
+          choice4: 'Where’s My lamb?', 
+        answer: 3
+      },
+      {
+        question: 'Which is not a published map of DiskWorld?',
+          choice1: 'THE COMPLEAT DISCWORLD ATLAS', 
+         choice2: 'THE DISCWORLD MAPP', 
+          choice3: 'THE COMPLEAT ANKH-MORPORK CITY GUIDE', 
+          choice4: 'A TOORIST GUIDE TO STO LAT', 
+        answer: 4
+      },    
+      {
+          question: 'What is not described in DEATH’S DOMAIN?',
+            choice1: 'A bottomless fishing pond', 
+            choice2: 'A golf course that’s not so much crazy as insane',
+            choice3: 'A useless maze', 
+            choice4: 'The dark gardens ', 
+          answer: 1
+        },
+        {
+          question: 'Which  is not a real quote from The Wit And Wisdom Of Discworld?',
+          choice1: 'A marriage is always made up of two people who are prepared to swear that only the other one snores.', 
+          choice2: 'Life is short. Smile while you still have teeth.', 
+          choice3: 'Inside every old person is a young person wondering what happened.',
+          choice4: 'When the least they could do to you was everything, then the most they could do to you suddenly held no terror.', 
+          answer: 2
+        },  
+ ]
+
+ const diskQuestions = [
+  {
+    question: 'What was the famous battle between the Trolls and the Dwarves called?',
+      choice1: 'The Battle of Koom Valley', 
+      choice2: 'The Battle of Little Smegging', 
+      choice3: 'The Battle of Sto Plains', 
+      choice4: 'The Battle of Bad Ass',
+      answer: 1
+  },
+  {
+    question: 'Why does the Diskworld have so many stone circles?',
+      choice1: 'Because its so hard to wash the blood off the altar slab after the first dozen or so human sacrifices.',
+      choice2: 'No-one knows', 
+      choice3: 'Because the gods demand it', 
+      choice4: 'Because its always cheaper to buy a new 33-MegaLith circle than upgrade your old one.', 
+      answer: 4
+    
+  },
+  {
+      question: 'Where does Twoflower come from?',
+        choice1: 'The Sto Plains', 
+        choice2: 'The Counterweight Continent',
+        choice3: 'Klatch', 
+        choice4: 'The Wyrmberg', 
+        answer: 2
+      
+    },
+    {
+      question: 'What was Terry Prachett Diagnosed with in 2007?',
+        choice1: 'Frontal variant Alzheimer’s disease ',
+        choice2: 'Huntington’s disease', 
+        choice3: 'Acromesomelic Dysplasia', 
+        choice4: 'Posterior Cortical Atrophy',
+      answer: 4
+    },  
+    {
+      question: 'What was the last book written by Terry Prachett which was published poshumously?',
+        choice1: 'The Shepherd’s Crown', 
+        choice2: 'The Amazing Maurice and His Educated Rodents.', 
+        choice3: 'The Colour of Magic', 
+        choice4: 'Raising Steam', 
+      answer: 1
+    },
+    {
+      question: 'In what year did Terry Prachett die?',
+        choice1: '2018', 
+        choice2: '2012', 
+        choice3: '2020', 
+        choice4: '2015', 
+        answer: 4
+    },
+    {
+        question: 'What apprenticeship job did Terry Prachett drop out of school for?',
+        choice1: 'Plumber', 
+        choice2: 'Copy Writer',
+          choice3: 'Journalist', 
+          choice4: 'Electrition', 
+        answer: 3
+      },
+      {
+        question: 'What did a young Terry Prachett want to be when he grew up?',
+          choice1: 'Scientist', 
+         choice2: 'Editor', 
+          choice3: 'Journalist', 
+          choice4: 'Astronomer', 
+        answer: 4
+      },    
+      {
+          question: 'How much did Pratchett receive for his first published story The Hades Business?',
+            choice1: '£14', 
+            choice2: '£140',
+            choice3: '£50', 
+            choice4: '£500', 
+          answer: 1
+        },
+        {
+          question: 'Who did Terry Pratchett marry in 1968?',
+          choice1: 'Linn Pembroke', 
+          choice2: 'Lyn Purves', 
+          choice3: 'Lynette Purvell',
+          choice4: 'Lynora Percy', 
+          answer: 2
+        },  
+ ]
+
 const MAX_AUTHOR_QUESTIONS = authorQuestions.length;
 
 const Correct_Bonus = 1;
@@ -453,37 +708,45 @@ function selectCatagory(catagory) {
       case "author":
         availableAuthorQuesions = [...authorQuestions];
           document.getElementById("name").innerHTML = "Terry Prachett Author Quiz";
+          startAuthorQuiz()
           break;
       case "death":
         availableAuthorQuesions = [...deathQuestions];
           document.getElementById("name").innerHTML = "Terry Prachett Death Quiz";
+          startAuthorQuiz()
           break;
       case "witch":
         availableAuthorQuesions = [...witchQuestions];
           document.getElementById("name").innerHTML = "Terry Prachett Witches Quiz";
+          startAuthorQuiz()
           break;
       case "wizard":
         availableAuthorQuesions = [...wizardQuestions];
           document.getElementById("name").innerHTML = "Terry Prachett Wizards Quiz";
+          startAuthorQuiz()
           break;
           case "moist":
             availableAuthorQuesions = [...moistQuestions];
           document.getElementById("name").innerHTML = "Terry Prachett Industrial Revolution Quiz";
+          startAuthorQuiz()
           break;
       case "disk":
         availableAuthorQuesions = [...diskQuestions];
           document.getElementById("name").innerHTML = "Terry Prachett DiskWorld Quiz";
+          startAuthorQuiz()
           break;
           case "literature":
             availableAuthorQuesions = [...litQuestions];
           document.getElementById("name").innerHTML = "Terry Prachett Literature Quiz";
+          startAuthorQuiz()
           break;
       case "guards":
         availableAuthorQuesions = [...guardQuestions];
           document.getElementById("name").innerHTML = "Terry Prachett Guards Quiz";
+          startAuthorQuiz()
           break;
       }
-    startAuthorQuiz()
+    
   }
 
 
