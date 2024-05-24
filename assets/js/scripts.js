@@ -11,7 +11,7 @@ let currentquestion = {};
 let acceptingAnswers = false;
 let score = 0;
 let questionCounter = 0;
-let availableAuthorQuesions = [];
+let availableQuesions = [];
 
 
 
@@ -638,64 +638,64 @@ const authorQuestions = [
       
     },
     {
-      question: 'What was Terry Prachett Diagnosed with in 2007?',
-        choice1: 'Frontal variant Alzheimer’s disease ',
-        choice2: 'Huntington’s disease', 
-        choice3: 'Acromesomelic Dysplasia', 
-        choice4: 'Posterior Cortical Atrophy',
+      question: 'What is Lord Vetinari’s first name?',
+        choice1: 'Howard',
+        choice2: 'Horatio', 
+        choice3: 'Heathcliff', 
+        choice4: 'Havelock',
       answer: 4
     },  
     {
-      question: 'What was the last book written by Terry Prachett which was published poshumously?',
-        choice1: 'The Shepherd’s Crown', 
-        choice2: 'The Amazing Maurice and His Educated Rodents.', 
-        choice3: 'The Colour of Magic', 
-        choice4: 'Raising Steam', 
+      question: 'What does Om unexpectedly manifest as in Small Gods?',
+        choice1: 'A tortoise', 
+        choice2: 'A cow', 
+        choice3: 'A mouse', 
+        choice4: 'A hedgehog', 
       answer: 1
     },
     {
-      question: 'In what year did Terry Prachett die?',
-        choice1: '2018', 
-        choice2: '2012', 
-        choice3: '2020', 
-        choice4: '2015', 
+      question: 'Pteppic is a graduate of which guild?',
+        choice1: 'Theives', 
+        choice2: 'Merchants', 
+        choice3: 'Alchemists', 
+        choice4: ' Assassins', 
         answer: 4
     },
     {
-        question: 'What apprenticeship job did Terry Prachett drop out of school for?',
-        choice1: 'Plumber', 
-        choice2: 'Copy Writer',
-          choice3: 'Journalist', 
-          choice4: 'Electrition', 
+        question: 'Before becoming Patritian, which guild did Lord Vetenari belong to?',
+        choice1: 'Beggers', 
+        choice2: 'Theives',
+          choice3: 'Assasins', 
+          choice4: 'Merchants', 
         answer: 3
       },
       {
-        question: 'What did a young Terry Prachett want to be when he grew up?',
-          choice1: 'Scientist', 
-         choice2: 'Editor', 
-          choice3: 'Journalist', 
-          choice4: 'Astronomer', 
+        question: 'WWhat do the initials UU stand for?',
+          choice1: 'Unusual University', 
+         choice2: 'Undetectible University', 
+          choice3: 'Underground University', 
+          choice4: 'Unseen University', 
         answer: 4
       },    
       {
-          question: 'How much did Pratchett receive for his first published story The Hades Business?',
-            choice1: '£14', 
-            choice2: '£140',
-            choice3: '£50', 
-            choice4: '£500', 
-          answer: 1
+          question: 'Which of these is not the name of a place in Discworld?',
+            choice1: 'Wyrmberg', 
+            choice2: 'Klatch',
+            choice3: 'Nimbusvale', 
+            choice4: 'Quirm', 
+          answer: 3
         },
         {
-          question: 'Who did Terry Pratchett marry in 1968?',
-          choice1: 'Linn Pembroke', 
-          choice2: 'Lyn Purves', 
-          choice3: 'Lynette Purvell',
-          choice4: 'Lynora Percy', 
+          question: 'What is Discworld's magic number?',
+          choice1: '4', 
+          choice2: '8', 
+          choice3: '13',
+          choice4: '7', 
           answer: 2
         },  
  ]
 
-const MAX_AUTHOR_QUESTIONS = authorQuestions.length;
+const MAX_QUESTIONS = availableQuestions.length;
 
 const Correct_Bonus = 1;
 Max_Questions = 10;
@@ -706,44 +706,44 @@ function selectCatagory(catagory) {
   switch(catagory)
   {
       case "author":
-        availableAuthorQuesions = [...authorQuestions];
+        availableQuestions = [...authorQuestions];
           document.getElementById("name").innerHTML = "Terry Prachett Author Quiz";
-          startAuthorQuiz()
+          startQuiz()
           break;
       case "death":
-        availableAuthorQuesions = [...deathQuestions];
+        availableQuestions = [...deathQuestions];
           document.getElementById("name").innerHTML = "Terry Prachett Death Quiz";
-          startAuthorQuiz()
+          startQuiz()
           break;
       case "witch":
-        availableAuthorQuesions = [...witchQuestions];
+        availableQuestions = [...witchQuestions];
           document.getElementById("name").innerHTML = "Terry Prachett Witches Quiz";
-          startAuthorQuiz()
+          startQuiz()
           break;
       case "wizard":
-        availableAuthorQuesions = [...wizardQuestions];
+        availableQuestions = [...wizardQuestions];
           document.getElementById("name").innerHTML = "Terry Prachett Wizards Quiz";
-          startAuthorQuiz()
+          startQuiz()
           break;
           case "moist":
-            availableAuthorQuesions = [...moistQuestions];
+            availableQuestions = [...moistQuestions];
           document.getElementById("name").innerHTML = "Terry Prachett Industrial Revolution Quiz";
-          startAuthorQuiz()
+          startQuiz()
           break;
       case "disk":
-        availableAuthorQuesions = [...diskQuestions];
+        availableQuestions = [...diskQuestions];
           document.getElementById("name").innerHTML = "Terry Prachett DiskWorld Quiz";
-          startAuthorQuiz()
+          startQuiz()
           break;
           case "literature":
-            availableAuthorQuesions = [...litQuestions];
+            availableQuestions = [...litQuestions];
           document.getElementById("name").innerHTML = "Terry Prachett Literature Quiz";
-          startAuthorQuiz()
+          startQuiz()
           break;
       case "guards":
-        availableAuthorQuesions = [...guardQuestions];
+        availableQuestions = [...guardQuestions];
           document.getElementById("name").innerHTML = "Terry Prachett Guards Quiz";
-          startAuthorQuiz()
+          startQuiz()
           break;
       }
     
@@ -753,28 +753,28 @@ function selectCatagory(catagory) {
 
 
 //author quiz
- startAuthorQuiz = () => {
+ startQuiz = () => {
   questionCounter = 0;
   score = 0;
- // availableAuthorQuesions = [...authorQuestions];
-  getNewAuthorQuestion();
+
+  getNewQuestion();
 }
-getNewAuthorQuestion = () => {
-  if (availableAuthorQuesions.length === 0 || questionCounter >= MAX_AUTHOR_QUESTIONS) {
+getNewQuestion = () => {
+  if (availableQuestions.length === 0 || questionCounter >= MAX_QUESTIONS) {
     //go to the end page
    // return window.location.assign("endscreen.html");
   } else
  
   questionCounter++;
- const authorQuestionIndex = Math.floor(Math.random() * availableAuthorQuesions.length);
- currentQuestion = availableAuthorQuesions[authorQuestionIndex];
- authorQuestionElement.innerText = currentQuestion.question;
+ const QuestionIndex = Math.floor(Math.random() * availableQuestions.length);
+ currentQuestion = availableQuestions[QuestionIndex];
+ QuestionElement.innerText = currentQuestion.question;
 
  choices.forEach((choice) => {
   const number = choice.dataset['number'];
   choice.innerText = currentQuestion['choice' + number];
 });
-availableAuthorQuesions.splice(authorQuestionIndex, 1);
+availableQuestions.splice(QuestionIndex, 1);
     acceptingAnswers = true;
 };
 
@@ -793,7 +793,7 @@ choices.forEach((choice) => {
   
       setTimeout(() => {
         selectedChoice.parentElement.classList.remove(classToApply);
-        getNewAuthorQuestion();
+        getNewQuestion();
       }, 1000);
   });
 });
