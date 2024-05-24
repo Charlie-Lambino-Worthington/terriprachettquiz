@@ -6,10 +6,8 @@
 .homepage {
     background-color: #C7F0BD;
     color: #3D0B37;
-    height: 95vh;
     width: 75%;
   margin: 10px auto;
-  background-image: url("assets/images/77762.jpg") ;
   background-size: 200px 200px;
   animation: scroll 5s linear infinite;
   border: 10px solid #3D0B37;
@@ -26,7 +24,6 @@
     position: relative;
     display: inline-block;
     padding: 15px;
-
     background-color: #3D0B37;
     font-family: sans-serif;
     font-weight: bold;
