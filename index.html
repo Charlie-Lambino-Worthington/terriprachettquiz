@@ -13,7 +13,8 @@
     <div class="container homepage category">
         <div id="container-catagory">
             <div class="controls">
-                <h1>Pick Your Category</h1>
+                <h1> Welcome to this Terry prachett quiz</h1>
+                <h3>Pick Your Category</h3>
                 <button onclick="selectCategory('author')" id="authorcatagory" class="startbtn"><i class="fa-solid fa-feather-pointed"></i> Author</button>
                 <button onclick="selectCategory('disk')" id="diskworldcatagory" class="startbtn"><i class="fa-solid fa-republican"></i> Diskworld</button>
                 <button onclick="selectCategory('witch')" id="witchescatagory" class="startbtn"><i class="fa-solid fa-broom"></i> Witches</button>
@@ -61,14 +62,24 @@
         </div>
     </div>
 
-    <div class="container homepage win-lose">
-        <div id="end" class="centered">
-        
-            <h1 id="name">f</h1>
-           
+    <div class="container homepage win-lose centerbutton hide" id="end">
 
+        <div  class="centered">
+            <br>
+            <br>
+            <h1 id="quizname">Quiz Name</h1>
+            <br>
+            <p id="Congratulations">Congratulations you scored</p>
+            <br>
+            <h1  id="finalscore">
+              0
+             </h1>
+          <div class="centerbutton" id="centerbutton">
+            <br>
+            <button id="replay" onclick="playAgain()">Play Again</button>
+          </div>
         </div>
-    </div>
+      </div>
     <script src="assets/js/scripts.js"></script>
 </body>
 </html>

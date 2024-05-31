@@ -97,7 +97,7 @@ const authorQuestions = [
           choice4: 'Lynora Percy', 
           answer: 2
         },  
- ]
+ ];
 
  const deathQuestions = [
   {
@@ -182,7 +182,7 @@ const authorQuestions = [
           choice4: 'Mr Salzella', 
           answer: 2
         },  
- ]
+ ];
 
  const witchQuestions = [
   {
@@ -267,7 +267,7 @@ const authorQuestions = [
           choice4: 'She was able to get into its head', 
           answer: 2
         },  
- ]
+ ];
 
  const wizardQuestions = [
   {
@@ -352,7 +352,7 @@ const authorQuestions = [
           choice4: 'Mustrum Ridcully', 
           answer: 2
         },  
- ]
+ ];
 
  const moistQuestions = [
   {
@@ -437,7 +437,7 @@ const authorQuestions = [
           choice4: 'Samuel Vimes', 
           answer: 2
         },  
- ]
+ ];
 
  const guardQuestions = [
   {
@@ -522,7 +522,7 @@ const authorQuestions = [
           choice4: 'Licensed Premises (Hygiene) Acts of 1433', 
           answer: 2
         },  
- ]
+ ];
 
  const litQuestions = [
   {
@@ -607,7 +607,7 @@ const authorQuestions = [
           choice4: 'When the least they could do to you was everything, then the most they could do to you suddenly held no terror.', 
           answer: 2
         },  
- ]
+ ];
 
  const diskQuestions = [
   {
@@ -692,7 +692,7 @@ const authorQuestions = [
           choice4: '7', 
           answer: 2
         },  
- ]
+ ];
 
 
 //category select function
@@ -702,42 +702,49 @@ const selectCategory = (category) => {
       case "author":
         availableQuestions = [...authorQuestions];
         document.getElementById("name").innerText = "Terry Prachett Author Quiz";
-        console.log('author');
+        document.getElementById("quizname").innerText = "Terry Prachett Author Quiz";
         loadQuiz();
         break;
       case "death":
         availableQuestions = [...deathQuestions];
         document.getElementById("name").innerText = "Terry Prachett Death Quiz";
+        document.getElementById("quizname").innerText = "Terry Prachett Death Quiz";
         loadQuiz();
         break;
       case "witch":
         availableQuestions = [...witchQuestions];
         document.getElementById("name").innerText = "Terry Prachett Witches Quiz";
+        document.getElementById("quizname").innerText = "Terry Prachett Witches Quiz";
         loadQuiz();
         break;
       case "wizard":
         availableQuestions = [...wizardQuestions];
         document.getElementById("name").innerText = "Terry Prachett Wizards Quiz";
+        document.getElementById("quizname").innerText = "Terry Prachett Wizards Quiz";
         loadQuiz();
         break;
       case "moist":
         availableQuestions = [...moistQuestions];
         document.getElementById("name").innerText = "Terry Prachett Industrial Revolution Quiz";
+        document.getElementById("quizname").innerText = "Terry Prachett Industrial Revolution Quiz";
         loadQuiz();
         break;
       case "disk":
         availableQuestions = [...diskQuestions];
         document.getElementById("name").innerText = "Terry Prachett DiskWorld Quiz";
+        document.getElementById("quizname").innerText = "Terry Prachett Diskworld Quiz";
         loadQuiz();
         break;
       case "literature":
         availableQuestions = [...litQuestions];
         document.getElementById("name").innerText = "Terry Prachett Literature Quiz";
+        document.getElementById("quizname").innerText = "Terry Prachett Literature Quiz";
         loadQuiz();
         break;
       case "guards":
         availableQuestions = [...guardQuestions];
         document.getElementById("name").innerText = "Terry Prachett Guards Quiz";
+        document.getElementById("quizname").innerText = "Terry Prachett Guards Quiz";
         loadQuiz();
         break;
       }
