@@ -817,7 +817,7 @@ incrementScore = num => {
   scoreText.innerText = score;
 };
 
-//display final score
+//display final score 
 function displayFinalScore() {
   document.getElementById("end").classList.remove("hide");
   document.getElementById("quiz").classList.add("hide");
