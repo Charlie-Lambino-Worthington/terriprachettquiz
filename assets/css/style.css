@@ -40,9 +40,11 @@
    .incorrect {
     background-color: #FE5F55;
   }
+.hide {
+  display: none;
+}
 
-  /* Heads Up Display
-  /* HUD */
+  /* Heads Up Display HUD */
 
 #hud {
   display: flex;

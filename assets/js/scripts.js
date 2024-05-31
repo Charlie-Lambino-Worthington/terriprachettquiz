@@ -764,13 +764,15 @@ const selectCategory = (category) => {
 const loadQuiz = () => {
   questionCounter = 0;
   score = 0;
+  document.getElementById("quiz").classList.remove("hide");
+  document.getElementById("category").classList.add("hide");
   getNewQuestion();
 };
 
 const getNewQuestion = () => {
   if (availableQuestions.length === 0 || questionCounter >= MAX_QUESTIONS) {
     // Go to the end page
-    return window.location.assign("endscreen.html");
+    displayFinalScore();
   }
 
   questionCounter++;
@@ -815,5 +817,20 @@ incrementScore = num => {
   scoreText.innerText = score;
 };
 
+//display final score
+function displayFinalScore() {
+  document.getElementById("end").classList.remove("hide");
+  document.getElementById("quiz").classList.add("hide");
+  let finalScore = score;
+  document.getElementById("finalscore").innerText = `${finalScore}/${MAX_QUESTIONS}`;
+}
 
+//play again function
+const playAgain = () => {
+  questionCounter = 0;
+    score = 0;
+    document.getElementById("end").classList.add("hide");
+    document.getElementById("category").classList.remove("hide");
+    document.getElementById("score").innerText = 0;
+};
 
