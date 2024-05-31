@@ -26,6 +26,8 @@ background-repeat: repeat;
                 <h1> Welcome to this Terry prachett quiz</h1>
                 <br>
                 <h3>Pick Your Category</h3>
+                <br>
+                <div id="categorybuttons">
                 <button onclick="selectCategory('author')" id="authorcatagory" class="startbtn"><i class="fa-solid fa-feather-pointed"></i> Author</button>
                 <button onclick="selectCategory('disk')" id="diskworldcatagory" class="startbtn"><i class="fa-solid fa-republican"></i> Diskworld</button>
                 <button onclick="selectCategory('witch')" id="witchescatagory" class="startbtn"><i class="fa-solid fa-broom"></i> Witches</button>
@@ -34,13 +36,15 @@ background-repeat: repeat;
                 <button onclick="selectCategory('moist')" id="industrialrevolutioncatagory" class="startbtn"><i class="fa-solid fa-gears"></i> Industrial Revolution</button>
                 <button onclick="selectCategory('death')" id="deathcatagory" class="startbtn" ><i class="fa-solid fa-skull"></i> Death</button>
                 <button onclick="selectCategory('literature')" id="literaturecatagory" class="startbtn"><i class="fa-solid fa-book-bookmark"></i> Literature</button>
-            </div>
+              </div>
+              </div>
         </div>
     </div>
     <div class="container homepage quiz hide" id="quiz">
         <div  class="centered">
-        
+        <br>
             <h1 id="name"></h1>
+            <br>
             <div id="hud">
                 <div id="hud-item">
                   <p class="hud-prefix">
@@ -59,9 +63,10 @@ background-repeat: repeat;
               </div>
 <br>
             <h2 id="question" class="headline-seconday--grouped"></h2>
+        <br>
+        <br>
         
-        
-            <div class="answerbuttons btn-grid">
+            <div class="answerbuttons btn-grid" id="answerbuttons">
             <button class="btn--default" data-number="1"></button>
             <br>
             <button class="btn--default" data-number="2"></button>
@@ -84,6 +89,7 @@ background-repeat: repeat;
             <h1  id="finalscore">
               0
              </h1>
+             <br>
              <img src="" alt="" id="img" width="50%">
           <div class="centerbutton" id="centerbutton">
             <button id="replay" onclick="playAgain()">Play Again</button>
