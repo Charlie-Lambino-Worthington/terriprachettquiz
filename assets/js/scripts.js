@@ -800,7 +800,7 @@ choices.forEach(choice => {
 
     const classToApply = selectedAnswer == currentQuestion.answer ? "correct" : "incorrect";
     if (classToApply === "correct") {
-      incrementScore(CORRECT_BONUS);
+      incrementScore(CORRECT_BONUS); 
     }
 
     selectedChoice.parentElement.classList.add(classToApply);
