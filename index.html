@@ -8,12 +8,23 @@
     <title>Terry Pratchett Quiz</title>
     <link rel="icon" type="image/x-icon" href="assets/images/tmotp_web_0.jpg">
     <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        body {
+  background-image: url("assets/images/SpaceTurtle.jpg");
+background-size: cover;
+background-repeat: repeat;
+
+  }
+ 
+
+    </style>
 </head>
 <body>
     <div class="container homepage category" id="category">
         <div id="container-catagory">
             <div class="controls">
                 <h1> Welcome to this Terry prachett quiz</h1>
+                <br>
                 <h3>Pick Your Category</h3>
                 <button onclick="selectCategory('author')" id="authorcatagory" class="startbtn"><i class="fa-solid fa-feather-pointed"></i> Author</button>
                 <button onclick="selectCategory('disk')" id="diskworldcatagory" class="startbtn"><i class="fa-solid fa-republican"></i> Diskworld</button>
@@ -66,7 +77,6 @@
 
         <div  class="centered">
             <br>
-            <br>
             <h1 id="quizname">Quiz Name</h1>
             <br>
             <p id="Congratulations">Congratulations you scored</p>
@@ -76,7 +86,6 @@
              </h1>
              <img src="" alt="" id="img" width="50%">
           <div class="centerbutton" id="centerbutton">
-            <br>
             <button id="replay" onclick="playAgain()">Play Again</button>
           </div>
         </div>

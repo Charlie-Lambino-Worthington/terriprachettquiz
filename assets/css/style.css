@@ -4,27 +4,29 @@
     box-sizing: border-box;
 }
 .homepage {
-    background-color: #C7F0BD;
-    color: #3D0B37;
+    background-color: #2A5480;
+    color: #BF9B30;
     width: 75%;
+   min-height: 80vh;
   margin: 10px auto;
   background-size: 200px 200px;
   animation: scroll 5s linear infinite;
-  border: 10px solid #3D0B37;
+  border: 10px solid #37375E;
   border-radius: 20px;
   text-align: center;
   box-shadow: 0px 1px 4px -2px #333;
+ margin-top: 10vh;
 }
 .homepage button {
     border-radius: 50%; 
     font-size: larger;
-    color: #EAF2EF;
+    color: #BF9B30;
     margin: 10px;
     margin-top: 5%;
     position: relative;
     display: inline-block;
     padding: 15px;
-    background-color: #3D0B37;
+    background-color: #37375E;
     font-family: sans-serif;
     font-weight: bold;
     box-shadow: 0px 1px 4px -2px #333;
@@ -32,7 +34,7 @@
     margin-bottom: 5px;
 }
 .homepage button:hover {
-   background-color: #568259;
+   background-color: #777586;
 }
   .correct {
     background-color: #568259;
@@ -58,4 +60,33 @@
 
 .hud-main-text {
   text-align: center;
+}
+
+/*media query*/
+@media (max-width:600px) {
+  .homepage button {
+    border-radius: 50%; 
+    font-size: small;
+    width: 200px;
+    margin: 10px;
+    position: relative;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    padding: 5px;
+    font-family: sans-serif;
+    font-weight: bold;
+    box-shadow: 0px 1px 4px -2px #333;
+    text-shadow: 0px -1px #333;
+}
+h2, h3 {
+font-size: small;
+}
+.hud-prefix {
+  text-align: center;
+  font-size: 1rem;
+}
+h1 {
+  font-size: large;
+}
 }
