@@ -701,57 +701,57 @@ const selectCategory = (category) => {
   switch(category) {
       case "author":
         availableQuestions = [...authorQuestions];
-        document.getElementById("name").innerText = "Terry Prachett Author Quiz";
-        document.getElementById("quizname").innerText = "Terry Prachett Author Quiz";
+        document.getElementById("name").innerText = "Terry Pratchett Author Quiz";
+        document.getElementById("quizname").innerText = "Terry Pratchett Author Quiz";
         document.getElementById("img").src = "assets/images/tmotp_web_0.jpg";
         loadQuiz();
         break;
       case "death":
         availableQuestions = [...deathQuestions];
-        document.getElementById("name").innerText = "Terry Prachett Death Quiz";
-        document.getElementById("quizname").innerText = "Terry Prachett Death Quiz";
+        document.getElementById("name").innerText = "Terry Pratchett Death Quiz";
+        document.getElementById("quizname").innerText = "Terry Pratchett Death Quiz";
         document.getElementById("img").src = "assets/images/discworld_death.jpg";
         loadQuiz();
         break;
       case "witch":
         availableQuestions = [...witchQuestions];
-        document.getElementById("name").innerText = "Terry Prachett Witches Quiz";
-        document.getElementById("quizname").innerText = "Terry Prachett Witches Quiz";
+        document.getElementById("name").innerText = "Terry Pratchett Witches Quiz";
+        document.getElementById("quizname").innerText = "Terry Pratchett Witches Quiz";
         document.getElementById("img").src = "assets/images/nannyogg.webp";
         loadQuiz();
         break;
       case "wizard":
         availableQuestions = [...wizardQuestions];
-        document.getElementById("name").innerText = "Terry Prachett Wizards Quiz";
-        document.getElementById("quizname").innerText = "Terry Prachett Wizards Quiz";
+        document.getElementById("name").innerText = "Terry Pratchett Wizards Quiz";
+        document.getElementById("quizname").innerText = "Terry Pratchett Wizards Quiz";
         document.getElementById("img").src = "assets/images/wizards-faculty-kidby.jpg";
         loadQuiz();
         break;
       case "moist":
         availableQuestions = [...moistQuestions];
-        document.getElementById("name").innerText = "Terry Prachett Industrial Revolution Quiz";
-        document.getElementById("quizname").innerText = "Terry Prachett Industrial Revolution Quiz";
+        document.getElementById("name").innerText = "Terry Pratchett Industrial Revolution Quiz";
+        document.getElementById("quizname").innerText = "Terry Pratchett Industrial Revolution Quiz";
         document.getElementById("img").src = "assets/images/raisingsteam.jpg";
         loadQuiz();
         break;
       case "disk":
         availableQuestions = [...diskQuestions];
-        document.getElementById("name").innerText = "Terry Prachett DiscWorld Quiz";
-        document.getElementById("quizname").innerText = "Terry Prachett Discworld Quiz";
+        document.getElementById("name").innerText = "Terry Pratchett DiscWorld Quiz";
+        document.getElementById("quizname").innerText = "Terry Pratchett Discworld Quiz";
         document.getElementById("img").src = "assets/images/Discworld.jpg";
         loadQuiz();
         break;
       case "literature":
         availableQuestions = [...litQuestions];
-        document.getElementById("name").innerText = "Terry Prachett Literature Quiz";
-        document.getElementById("quizname").innerText = "Terry Prachett Literature Quiz";
+        document.getElementById("name").innerText = "Terry Pratchett Literature Quiz";
+        document.getElementById("quizname").innerText = "Terry Pratchett Literature Quiz";
         document.getElementById("img").src = "assets/images/products-1515.jpg";
         loadQuiz();
         break;
       case "guards":
         availableQuestions = [...guardQuestions];
-        document.getElementById("name").innerText = "Terry Prachett Guards Quiz";
-        document.getElementById("quizname").innerText = "Terry Prachett Guards Quiz";
+        document.getElementById("name").innerText = "Terry Pratchett Guards Quiz";
+        document.getElementById("quizname").innerText = "Terry Pratchett Guards Quiz";
         document.getElementById("img").src = "assets/images/guards.jpg";
         loadQuiz();
         break;
