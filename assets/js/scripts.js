@@ -16,7 +16,7 @@ const CORRECT_BONUS = 1;
 
 const authorQuestions = [
   {
-    question: 'What year was Terry Prachett born?',
+    question: 'What year was Terry Pratchett born?',
       choice1: '1948', 
       choice2: '1946', 
       choice3: '1950', 
@@ -24,7 +24,7 @@ const authorQuestions = [
       answer: 1
   },
   {
-    question: 'In what year did Terry Prachett publish his first story in a magazine?',
+    question: 'In what year did Terry Pratchett publish his first story in a magazine?',
       choice1: '1964',
       choice2: '1962', 
       choice3: '1970', 
@@ -42,7 +42,7 @@ const authorQuestions = [
       
     },
     {
-      question: 'What was Terry Prachett Diagnosed with in 2007?',
+      question: 'What was Terry Pratchett Diagnosed with, in 2007?',
         choice1: 'Frontal variant Alzheimer’s disease ',
         choice2: 'Huntington’s disease', 
         choice3: 'Acromesomelic Dysplasia', 
@@ -50,7 +50,7 @@ const authorQuestions = [
       answer: 4
     },  
     {
-      question: 'What was the last book written by Terry Prachett which was published poshumously?',
+      question: 'What was the last book written by Terry Pratchett which was published posthumously?',
         choice1: 'The Shepherd’s Crown', 
         choice2: 'The Amazing Maurice and His Educated Rodents.', 
         choice3: 'The Colour of Magic', 
@@ -58,7 +58,7 @@ const authorQuestions = [
       answer: 1
     },
     {
-      question: 'In what year did Terry Prachett die?',
+      question: 'In what year did Terry Pratchett die?',
         choice1: '2018', 
         choice2: '2012', 
         choice3: '2020', 
@@ -66,7 +66,7 @@ const authorQuestions = [
         answer: 4
     },
     {
-        question: 'What apprenticeship job did Terry Prachett drop out of school for?',
+        question: 'What apprenticeship job did Terry Pratchett drop out of school for?',
         choice1: 'Plumber', 
         choice2: 'Copy Writer',
           choice3: 'Journalist', 
@@ -74,7 +74,7 @@ const authorQuestions = [
         answer: 3
       },
       {
-        question: 'What did a young Terry Prachett want to be when he grew up?',
+        question: 'What did a young Terry Pratchett want to be when he grew up?',
           choice1: 'Scientist', 
          choice2: 'Editor', 
           choice3: 'Journalist', 
@@ -101,7 +101,7 @@ const authorQuestions = [
 
  const deathQuestions = [
   {
-    question: 'Who is deaths apprentice?',
+    question: 'Who is death’s apprentice?',
       choice1: 'Tod', 
       choice2: 'Nex', 
       choice3: 'Mort', 
@@ -109,7 +109,7 @@ const authorQuestions = [
       answer: 3
   },
   {
-    question: 'Who does deaths apprentice marry?',
+    question: 'Who does death’s apprentice marry?',
       choice1: 'Ysabell',
       choice2: 'Isabelle', 
       choice3: 'Yasmine', 
@@ -118,7 +118,7 @@ const authorQuestions = [
     
   },
   {
-      question: ' What is deaths stallion called?',
+      question: ' What is death’s stallion called?',
         choice1: 'Dobin', 
         choice2: 'Shadow',
         choice3: 'Binky', 
@@ -127,7 +127,7 @@ const authorQuestions = [
       
     },
     {
-      question: 'Which of these is not a real Terry Prachett book from the death series?',
+      question: 'Which of these is not a real Terry Pratchett book from the Death series?',
         choice1: 'Death and what comes next',
         choice2: 'Reaper man', 
         choice3: 'Soul music', 
@@ -135,7 +135,7 @@ const authorQuestions = [
       answer: 4
     },  
     {
-      question: 'What colour do deaths eyes glow?',
+      question: 'What colour do death’s eyes glow?',
         choice1: 'Blue', 
         choice2: 'Red', 
         choice3: 'Yellow', 
@@ -151,7 +151,7 @@ const authorQuestions = [
         answer: 4
     },
     {
-        question: 'What job did Albert do before becoming deaths manservant?',
+        question: 'What job did Albert do before becoming death’s manservant?',
         choice1: 'Assassin', 
         choice2: 'Barman',
           choice3: 'Wizard', 
@@ -194,7 +194,7 @@ const authorQuestions = [
       answer: 1
   },
   {
-    question: 'Who is the witch in Equal Rites who sells things to stop things that shouldn not be and help things that should?',
+    question: 'Who is the witch in Equal Rites who sells things to stop things that should not be and help things that should?',
       choice1: 'Lucy Tockley',
       choice2: 'Aminta DeVice', 
       choice3: 'Erzulie Gogil', 
@@ -220,7 +220,7 @@ const authorQuestions = [
       answer: 4
     },  
     {
-      question: 'In Wyrd Sisters what familiar does Magrat have?',
+      question: 'In Wyrd Sisters, what familiar does Magrat have?',
         choice1: 'Cat', 
         choice2: 'Miner bird', 
         choice3: 'Frog', 
@@ -260,7 +260,7 @@ const authorQuestions = [
           answer: 1
         },
         {
-          question: 'In Lords and ladies why is Esme able to capture the unicorn?',
+          question: 'In Lords and Ladies why is Esme able to capture the unicorn?',
           choice1: 'Luck', 
           choice2: 'She is a virgin', 
           choice3: 'She is a powerful witch',
@@ -282,7 +282,7 @@ const authorQuestions = [
     question: 'According to the Light fantastic, what is a Thaum?',
       choice1: 'The amount of giant turtles in the universe',
       choice2: 'The amount of light emitted from the disc sun', 
-      choice3: 'A non humanoids intelligence quotient', 
+      choice3: 'A non humanoids-intelligence quotient', 
       choice4: 'The basic unit of magical strength', 
       answer: 4
     
@@ -368,7 +368,7 @@ const authorQuestions = [
       choice1: 'The post office staff made her a dress',
       choice2: 'To attract the attention/ affection of Moist Von Lipvig ', 
       choice3: 'To go undercover in the post office', 
-      choice4: 'Miss Maccalariat would not allow the "male" golems into the Post Office womens toilets to clean', 
+      choice4: 'Miss Maccalariat would not allow the "male" golems into the Post Office women’s toilets to clean', 
       answer: 4
     
   },
@@ -382,7 +382,7 @@ const authorQuestions = [
       
     },
     {
-      question: 'Who is head of the Golem Trust?',
+      question: 'Who is the head of the Golem Trust?',
         choice1: 'Sachrissa Cripslock',
         choice2: 'Tolliver Groat', 
         choice3: 'Reacher Gilt', 
@@ -398,8 +398,8 @@ const authorQuestions = [
       answer: 1
     },
     {
-      question: 'WWhen  Moist meets the chairman of the Bank, Mrs Topsy Lavish, What is not something that she describes him as?',
-        choice1: 'A charlie artful', 
+      question: 'When  Moist meets the chairman of the Bank, Mrs Topsy Lavish, What is not something that she describes him as?',
+        choice1: 'A Charlie Artful', 
         choice2: 'A rogue', 
         choice3: 'An all-round bunco artist', 
         choice4: 'A jammy dodger', 
@@ -433,7 +433,7 @@ const authorQuestions = [
           question: 'What is the name of the young self-taught engineer from Sto Lat who invented a locomotive, which he named Iron Girder??',
           choice1: 'Rhys Rhysson', 
           choice2: 'Dick Simnel', 
-          choice3: 'Harry king',
+          choice3: 'Harry King',
           choice4: 'Samuel Vimes', 
           answer: 2
         },  
@@ -515,8 +515,8 @@ const authorQuestions = [
           answer: 1
         },
         {
-          question: 'Which of these crimes was carrot not told not to enforce, but allowed to throw the book at?',
-          choice1: 'Head of the Theives Guild for Conspiracy to Commit Crime, Section 14 (iii) of the General Felonies Act 1678', 
+          question: 'Which of these crimes was Carrot not told not to enforce, but allowed to throw the book at?',
+          choice1: 'Head of the Thieves Guild for Conspiracy to Commit Crime, Section 14 (iii) of the General Felonies Act 1678', 
           choice2: 'Countless charges against the king of Ankh-Morpork', 
           choice3: 'Unsheathed edged weapons, Section 3 of Public Ale Houses (Opening) Act 1678',
           choice4: 'Licensed Premises (Hygiene) Acts of 1433', 
@@ -526,7 +526,7 @@ const authorQuestions = [
 
  const litQuestions = [
   {
-    question: 'Which of these is not one of the Science of Disk world Series?',
+    question: 'Which of these is not one of the Science of Discworld Series?',
       choice1: 'The Globe', 
       choice2: 'Judgement Day', 
       choice3: 'Darwins Watch', 
@@ -563,12 +563,12 @@ const authorQuestions = [
       question: 'Who authorised Mrs Bradshaw’s Handbook?',
         choice1: 'Mr Lipwig ', 
         choice2: 'Dick Simnel', 
-        choice3: 'Harry king', 
+        choice3: 'Harry King', 
         choice4: 'Lord Havelock Vetinari', 
       answer: 1
     },
     {
-      question: 'In her book Nannny Ogg imparts her thoughts on?',
+      question: 'In her book Nanny Ogg imparts her thoughts on?',
         choice1: 'Life', 
         choice2: 'Death', 
         choice3: 'Etiquette', 
@@ -584,7 +584,7 @@ const authorQuestions = [
         answer: 3
       },
       {
-        question: 'Which is not a published map of DiskWorld?',
+        question: 'Which is not a published map of DiscWorld?',
           choice1: 'THE COMPLEAT DISCWORLD ATLAS', 
          choice2: 'THE DISCWORLD MAPP', 
           choice3: 'THE COMPLEAT ANKH-MORPORK CITY GUIDE', 
@@ -600,7 +600,7 @@ const authorQuestions = [
           answer: 1
         },
         {
-          question: 'Which  is not a real quote from The Wit And Wisdom Of Discworld?',
+          question: 'Which is not a real quote from The Wit And Wisdom Of Discworld?',
           choice1: 'A marriage is always made up of two people who are prepared to swear that only the other one snores.', 
           choice2: 'Life is short. Smile while you still have teeth.', 
           choice3: 'Inside every old person is a young person wondering what happened.',
@@ -619,9 +619,9 @@ const authorQuestions = [
       answer: 1
   },
   {
-    question: 'Why does the Diskworld have so many stone circles?',
-      choice1: 'Because its so hard to wash the blood off the altar slab after the first dozen or so human sacrifices.',
-      choice2: 'No-one knows', 
+    question: 'Why does the Discworld have so many stone circles?',
+      choice1: 'Because it’s so hard to wash the blood off the altar slab after the first dozen or so human sacrifices.',
+      choice2: 'No one knows', 
       choice3: 'Because the gods demand it', 
       choice4: 'Because its always cheaper to buy a new 33-MegaLith circle than upgrade your old one.', 
       answer: 4
@@ -654,24 +654,24 @@ const authorQuestions = [
     },
     {
       question: 'Pteppic is a graduate of which guild?',
-        choice1: 'Theives', 
+        choice1: 'Thieves', 
         choice2: 'Merchants', 
         choice3: 'Alchemists', 
         choice4: ' Assassins', 
         answer: 4
     },
     {
-        question: 'Before becoming Patritian, which guild did Lord Vetenari belong to?',
+        question: 'Before becoming Patrician, which guild did Lord Vetenari belong to?',
         choice1: 'Beggers', 
-        choice2: 'Theives',
+        choice2: 'Thieves',
           choice3: 'Assasins', 
           choice4: 'Merchants', 
         answer: 3
       },
       {
-        question: 'WWhat do the initials UU stand for?',
+        question: 'What do the initials UU stand for?',
           choice1: 'Unusual University', 
-         choice2: 'Undetectible University', 
+         choice2: 'Undetectable University', 
           choice3: 'Underground University', 
           choice4: 'Unseen University', 
         answer: 4
@@ -685,7 +685,7 @@ const authorQuestions = [
           answer: 3
         },
         {
-          question: 'What is Discworlds magic number?',
+          question: 'What is Discworld’s magic number?',
           choice1: '4', 
           choice2: '8', 
           choice3: '13',
@@ -736,8 +736,8 @@ const selectCategory = (category) => {
         break;
       case "disk":
         availableQuestions = [...diskQuestions];
-        document.getElementById("name").innerText = "Terry Prachett DiskWorld Quiz";
-        document.getElementById("quizname").innerText = "Terry Prachett Diskworld Quiz";
+        document.getElementById("name").innerText = "Terry Prachett DiscWorld Quiz";
+        document.getElementById("quizname").innerText = "Terry Prachett Discworld Quiz";
         document.getElementById("img").src = "assets/images/Discworld.jpg";
         loadQuiz();
         break;
